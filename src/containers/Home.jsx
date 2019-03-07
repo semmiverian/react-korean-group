@@ -6,8 +6,12 @@ import LoonaLogo from './../assets/loona.jpg'
 import TwiceLogo from './../assets/twice.png'
 import Group from './../components/Group.jsx'
 import Member from './../components/Member.jsx'
+import {connect} from 'react-redux'
+import {bindActionCreators} from 'redux'
 
-export default class Home extends Component {
+import {fetchMember} from '../store/actions/member'
+
+class Home extends Component {
   state = {
     members: [],
     groupName: ''
@@ -31,17 +35,17 @@ export default class Home extends Component {
         <span className="font-semibold text-lg"> Choose Your favorite Group</span>
 
         <div className="w-full flex justify-between my-4">
-          <Group logo={ApinkLogo} onClick={() => this.fetchMember('apink')} />
-          <Group logo={LoonaLogo} onClick={() => this.fetchMember('loona')} />
+          <Group logo={ApinkLogo} onClick={() => this.props.fetchMember('apink')} />
+          <Group logo={LoonaLogo} onClick={() => this.props.fetchMember('loona')} />
           <Group logo={IzoneLogo} />
           <Group logo={TwiceLogo} />
         </div>
 
-        {this.state.groupName && (
+        {this.props.groupName && (
           <>
-            <span className="font-semibold text-lg"> Members of Apink</span>
+            <span className="font-semibold text-lg"> Members of {this.props.groupName}</span>
             <div className="w-full flex flex-wrap my-4">
-              {this.state.members.map((member, index) => (
+              {this.props.members.map((member, index) => (
                 <Member member={member} index={index} key={index} />
               ))}
             </div>
@@ -51,3 +55,19 @@ export default class Home extends Component {
     )
   }
 }
+
+const mapStateToProps = state => ({
+  groupName: state.member.groupName,
+  members: state.member.members
+})
+
+// const mapDispatchToProps = dispatch => ({
+//   fetchMember: group => dispatch(fetchMember(group))
+// })
+
+const mapDispatchToProps = dispatch => bindActionCreators({fetchMember}, dispatch)
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Home)
