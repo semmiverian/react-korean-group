@@ -1,4 +1,5 @@
 import React from 'react'
+import ApplicationContext from '../context'
 
 const generatePadding = index => {
   const getIndex = generateIndex(index)
@@ -21,12 +22,16 @@ const generateIndex = index => {
 
 export default function Member({member, index}) {
   return (
-    <div className={generatePadding(index)}>
-      <div className="bg-white rounded shadow flex flex-col justify-center">
-        <img className="cover w-full" src={member.image} alt="apink" />
-        <span className="font-medium text-xl text-center p-2">{member.name}</span>
-        <span className="font-medium text-subtle-grey text-center p-2">{member.dateOfBirth}</span>
-      </div>
-    </div>
+    <ApplicationContext.Consumer>
+      {theme => (
+        <div className={generatePadding(index)}>
+          <div className={`${theme.card} rounded shadow flex flex-col justify-center`}>
+            <img className="cover w-full" src={member.image} alt="apink" />
+            <span className={`font-medium text-xl text-center p-2 ${theme.text}`}>{member.name}</span>
+            <span className={`font-medium text-center p-2 ${theme.text}`}>{member.dateOfBirth}</span>
+          </div>
+        </div>
+      )}
+    </ApplicationContext.Consumer>
   )
 }
