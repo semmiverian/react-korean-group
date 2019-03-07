@@ -129,8 +129,8 @@ let colors = {
   'pink-lighter': '#ffbbca',
   'pink-lightest': '#ffebef',
 
-  'warm-grey-light': 'hsl(211, 39%, 23%)',
-  'warm-grey': 'hsl(209, 34%, 30%)'
+  'warm-grey': 'hsl(209, 34%, 30%)',
+  'warm-grey-light': 'hsl(209, 61%, 16%)'
 }
 
 module.exports = {
