@@ -1,0 +1,96 @@
+{
+  "apink": [
+    {
+      "name": "Chorong",
+      "dateOfBirth": "03-03-1991",
+      "image": "https://i.pinimg.com/564x/70/40/50/70405041b3fd9634481eede0a120b182.jpg"
+    },
+    {
+      "name": "Bomi",
+      "dateOfBirth": "13-08-1993",
+      "image": "https://i.pinimg.com/564x/73/d4/3f/73d43f2dcc71bf0d9ba676d881dee78d.jpg"
+    },
+    {
+      "name": "Eunji",
+      "dateOfBirth": "18-08-1993",
+      "image": "https://i.pinimg.com/564x/5f/7a/93/5f7a9343e414a8f0be14fb75176545b6.jpg"
+    },
+    {
+      "name": "Naeun",
+      "dateOfBirth": "10-02-1994",
+      "image": "https://i.pinimg.com/564x/5b/87/31/5b8731ebacf7f04cdc7e633ac44e7d1a.jpg"
+    },
+    {
+      "name": "Namjoo",
+      "dateOfBirth": "15-04-1995",
+      "image": "https://i.pinimg.com/564x/24/94/cc/2494cccc23502ab671389b158c376784.jpg"
+    },
+    {
+      "name": "Hayoung",
+      "dateOfBirth": "19-07-1996",
+      "image": "https://i.pinimg.com/564x/4d/68/cd/4d68cd277e36d1ca56b81d42cab6d4fe.jpg"
+    }
+  ],
+  "loona": [
+    {
+      "name": "Heejin",
+      "dateOfBirth": "19-10-2000",
+      "image": "https://i.pinimg.com/564x/92/46/69/924669b16c44da985253cf769772a8c2.jpg"
+    },
+    {
+      "name": "Hyunjin",
+      "dateOfBirth": "15-11-2000",
+      "image": "https://i.pinimg.com/564x/0b/90/d2/0b90d2f0d77a0f8996b384be441823e6.jpg"
+    },
+    {
+      "name": "Haseul",
+      "dateOfBirth": "18-08-1997",
+      "image": "https://i.pinimg.com/564x/da/5e/aa/da5eaa36e7c1e2fb3e10816f3ed38b4a.jpg"
+    },
+    {
+      "name": "Yeojin",
+      "dateOfBirth": "11-11-2002",
+      "image": "https://i.pinimg.com/564x/81/c9/93/81c993feacf25b419b0d14f4a446c21c.jpg"
+    },
+    {
+      "name": "Vivi",
+      "dateOfBirth": "09-12-1996",
+      "image": "https://i.pinimg.com/564x/56/9d/53/569d53ef1620a90f2ca3020f7e44ed88.jpg"
+    },
+    {
+      "name": "Choerry",
+      "dateOfBirth": "04-06-2001",
+      "image": "https://i.pinimg.com/564x/73/00/ec/7300ec05afde10b2281ddb58eec7a39a.jpg"
+    },
+    {
+      "name": "Kim Lip",
+      "dateOfBirth": "10-02-1999",
+      "image": "https://i.pinimg.com/564x/73/d4/4c/73d44c31b21971350a6db5f1dd391ce9.jpg"
+    },
+    {
+      "name": "Jin Soul",
+      "dateOfBirth": "13-06-1997",
+      "image": "https://i.pinimg.com/564x/1a/08/74/1a087427acdc6cd16b48bf2d815236c5.jpg"
+    },
+    {
+      "name": "Yves",
+      "dateOfBirth": "24-05-1997",
+      "image": "https://i.pinimg.com/564x/d7/f5/89/d7f5896858c7b90a9d50538129a9b8f7.jpg"
+    },
+    {
+      "name": "Chuu",
+      "dateOfBirth": "20-10-1999",
+      "image": "https://i.pinimg.com/564x/4a/fb/3f/4afb3f1682dcc3e4891c65fc29c6c260.jpg"
+    },
+    {
+      "name": "Go Won",
+      "dateOfBirth": "19-10-2000",
+      "image": "https://i.pinimg.com/564x/cc/38/4d/cc384d8dff8b0905efb9e2bae56d60c0.jpg"
+    },
+    {
+      "name": "Olivia Hye",
+      "dateOfBirth": "12-11-2001",
+      "image": "https://i.pinimg.com/564x/0f/fc/4b/0ffc4b3cc1d660c594592a5be023f4d5.jpg"
+    }
+  ]
+}

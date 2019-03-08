@@ -10,6 +10,7 @@ import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
 
 import {fetchMember} from '../store/actions/member'
+import ApplicationContext from '../context'
 
 class Home extends Component {
   state = {
@@ -31,27 +32,33 @@ class Home extends Component {
 
   render() {
     return (
-      <div className="w-4/5 mx-auto">
-        <span className="font-semibold text-lg"> Choose Your favorite Group</span>
-
-        <div className="w-full flex justify-between my-4">
-          <Group logo={ApinkLogo} onClick={() => this.props.fetchMember('apink')} />
-          <Group logo={LoonaLogo} onClick={() => this.props.fetchMember('loona')} />
-          <Group logo={IzoneLogo} />
-          <Group logo={TwiceLogo} />
-        </div>
-
-        {this.props.groupName && (
-          <>
-            <span className="font-semibold text-lg"> Members of {this.props.groupName}</span>
-            <div className="w-full flex flex-wrap my-4">
-              {this.props.members.map((member, index) => (
-                <Member member={member} index={index} key={index} />
-              ))}
+      <ApplicationContext.Consumer>
+        {
+          theme => (
+            <div className="w-4/5 mx-auto">
+            <span className={`font-semibold text-lg ${theme.text}`}> Choose Your favorite Group</span>
+    
+            <div className="w-full flex justify-between my-4">
+              <Group logo={ApinkLogo} onClick={() => this.props.fetchMember('apink')} />
+              <Group logo={LoonaLogo} onClick={() => this.props.fetchMember('loona')} />
+              <Group logo={IzoneLogo} />
+              <Group logo={TwiceLogo} />
             </div>
-          </>
-        )}
-      </div>
+    
+            {this.props.groupName && (
+              <>
+                <span className="font-semibold text-lg"> Members of {this.props.groupName}</span>
+                <div className="w-full flex flex-wrap my-4">
+                  {this.props.members.map((member, index) => (
+                    <Member member={member} index={index} key={index} />
+                  ))}
+                </div>
+              </>
+            )}
+          </div>
+          )
+        }
+      </ApplicationContext.Consumer>
     )
   }
 }
