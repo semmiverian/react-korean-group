@@ -43,9 +43,8 @@ test('it will show the member group when click one of the group logo', async () 
 
   fireEvent.click(apinkElement)
 
-  await wait(() => getByTestId('member-wrapper'))
+  await wait(() => expect(getByTestId('member-wrapper').childElementCount).toBe(6))
 
-  expect(getByTestId('member-wrapper').childElementCount).toBe(6)
   expect(getByText(/apink/i)).toBeInTheDocument()
   expect(axiosMock.get).toHaveBeenCalledTimes(1)
 })

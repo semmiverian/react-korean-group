@@ -46,9 +46,7 @@ test('it will return apink member when searching apink as the group name', async
   const form = getByTestId('form-find-group')
   fireEvent.submit(form)
 
-  await wait(() => getByTestId('member-wrapper'))
-
-  expect(getByText(/apink/i)).toBeInTheDocument()
+  await wait(() => expect(getByText(/apink/i)).toBeInTheDocument())
 
   expect(getByTestId('member-wrapper').childElementCount).toBe(6)
 
@@ -67,9 +65,7 @@ test('it will render error when find unregistered component', async () => {
   const form = getByTestId('form-find-group')
   fireEvent.submit(form)
 
-  await wait(() => getByText(/not found/i))
-
-  expect(getByText(/not found/i)).toBeInTheDocument()
+  await wait(() => expect(getByText(/not found/i)).toBeInTheDocument())
 
   expect(queryByTestId('member-wrapper')).not.toBeInTheDocument()
 })
