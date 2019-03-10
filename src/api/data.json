@@ -92,5 +92,99 @@
       "dateOfBirth": "12-11-2001",
       "image": "https://i.pinimg.com/564x/0f/fc/4b/0ffc4b3cc1d660c594592a5be023f4d5.jpg"
     }
+  ],
+  "bts": [
+    {
+      "name": "RM",
+      "dateOfBirth": "12-09-1994",
+      "image": "https://uploads.disquscdn.com/images/6a720491651aeabefb48363f0eea1ed5c40f70f5bbf1a73b16feb504c28e746f.jpg?w=600&h=868"
+    },
+    {
+      "name": "Jin",
+      "dateOfBirth": "04-12-1992",
+      "image": "https://uploads.disquscdn.com/images/9d868d79b8ebd50ce58b66734e5ccb50ea2373f2ab60f9d46716fccb949ecf19.jpg?w=600&h=831"
+    },
+    {
+      "name": "Suga",
+      "dateOfBirth": "09-03-1993",
+      "image": "https://uploads.disquscdn.com/images/594250f524a8a7e8afa51243cd86656b9dc579f8f9d23cf3b8378668244ed970.jpg?w=600&h=843"
+    },
+    {
+      "name": "J-Hope",
+      "dateOfBirth": "18-02-1994",
+      "image": "https://uploads.disquscdn.com/images/ec22071a6dd8c4ca2a253f686757b6f87d9a097c448fb2dced29884204f20dd3.jpg?w=600&h=817"
+    },
+    {
+      "name": "Jimin",
+      "dateOfBirth": "13-10-1995",
+      "image": "https://uploads.disquscdn.com/images/7256763a4fd01f63310c2c3f82006ebeae38b682df5aa0d981ba365ef79708be.jpg?w=600&h=841"
+    },
+    {
+      "name": "V",
+      "dateOfBirth": "30-12-1995",
+      "image": "https://uploads.disquscdn.com/images/f53c0e4b490f06f6438449a87afd015e8b8f65f2a668b574b0d3f1394375dcbd.jpg?w=600&h=834"
+    },
+    {
+      "name": "Jung Kook",
+      "dateOfBirth": "1-09-1997",
+      "image": "https://uploads.disquscdn.com/images/4b4f90f8006e167664c20d0070ddcb0893421f75a40501f943f419dee52e1cf6.jpg?w=600&h=848"
+    }
+  ],
+  "wannaone": [
+    {
+      "name": "Jisung",
+      "dateOfBirth": "08-03-1991",
+      "image": "https://uploads.disquscdn.com/images/9b8bef41d57c0140f9238ecaeb2b29522f902f9bef12fd5d5e265a86b1da3181.jpg?w=600&h=1000"
+    },
+    {
+      "name": "Sungwoon",
+      "dateOfBirth": "22-03-1994",
+      "image": "https://uploads.disquscdn.com/images/976f601c397e45272ab425750ea1654c23b3c89a3862f1eb25ba28fba4df8cc7.jpg"
+    },
+    {
+      "name": "Minhyun",
+      "dateOfBirth": "09-08-1995",
+      "image": "https://uploads.disquscdn.com/images/403be715d3377794e1a6bf547f1b268529e73e35b3cae389b968b72e39f461bd.jpg?w=600&h=1000"
+    },
+    {
+      "name": "Seongwoo",
+      "dateOfBirth": "25-08-1995",
+      "image": "https://uploads.disquscdn.com/images/936881aa5484ab544f02f35552c98873cbb73f2af98745d0d082d26e46e93ff6.jpg"
+    },
+    {
+      "name": "Jaehwan",
+      "dateOfBirth": "27-05-1996",
+      "image": "https://uploads.disquscdn.com/images/213c767fdd37861f7cbf134166109d296691a543e7cf5873d73d79649dfc1d75.jpg?w=800&h=558"
+    },
+    {
+      "name": "Daniel",
+      "dateOfBirth": "10-12-1996",
+      "image": "https://uploads.disquscdn.com/images/b7480ead77c4fc07942c59a19fddf2ca034e5fe891d0a7a775e759383bfe78f6.jpg?w=800&h=558"
+    },
+    {
+      "name": "Jihoon",
+      "dateOfBirth": "29-05-1999",
+      "image": "https://uploads.disquscdn.com/images/6bddbfd437c114a5278993c69f06b071da931994efaa9fa500f5d7d615f109b1.jpg?w=800&h=558"
+    },
+    {
+      "name": "Woojin",
+      "dateOfBirth": "02-11-1999",
+      "image": "https://uploads.disquscdn.com/images/3e9f9d21e996f97d02edc22b58f31c18409852aff88cb684fe29097b82b5547c.jpg?w=800&h=558"
+    },
+    {
+      "name": "Jinyoung",
+      "dateOfBirth": "10-05-2000",
+      "image": "https://uploads.disquscdn.com/images/1396808208c3951be0b42e8122812fe06d82731d569fbdaae0127014f91d21ff.jpg"
+    },
+    {
+      "name": "Daehwi",
+      "dateOfBirth": "29-01-2001",
+      "image": "https://uploads.disquscdn.com/images/201b60166708a701ab0f898782c8b74a7e615daeb52cb2a7cefa120588992aeb.jpg?w=600&h=1000"
+    },
+    {
+      "name": "Kuanlin",
+      "dateOfBirth": "23-09-2001",
+      "image": "https://uploads.disquscdn.com/images/a66e52ea632437626eb88b0938e2f4ef04160c7d5f881b153e665a13bc16473d.jpg"
+    }
   ]
 }

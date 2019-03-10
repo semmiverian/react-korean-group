@@ -1,9 +1,9 @@
 import React, {Component} from 'react'
 import axios from 'axios'
 import ApinkLogo from './../assets/apink.png'
-import IzoneLogo from './../assets/izone.png'
+import BtsLogo from './../assets/bts.png'
 import LoonaLogo from './../assets/loona.jpg'
-import TwiceLogo from './../assets/twice.png'
+import WannaOneLogo from './../assets/wanna-one.png'
 import Group from './../components/Group.jsx'
 import Member from './../components/Member.jsx'
 import {connect} from 'react-redux'
@@ -33,22 +33,21 @@ class Home extends Component {
   render() {
     return (
       <ApplicationContext.Consumer>
-        {
-          theme => (
-            <div className="w-4/5 mx-auto">
+        {theme => (
+          <div className="w-4/5 mx-auto" data-testid="home-page">
             <span className={`font-semibold text-lg ${theme.text}`}> Choose Your favorite Group</span>
-    
-            <div className="w-full flex justify-between my-4">
+
+            <div className="w-full flex justify-between my-4" data-testid="group-container">
               <Group logo={ApinkLogo} onClick={() => this.props.fetchMember('apink')} />
               <Group logo={LoonaLogo} onClick={() => this.props.fetchMember('loona')} />
-              <Group logo={IzoneLogo} />
-              <Group logo={TwiceLogo} />
+              <Group logo={BtsLogo} onClick={() => this.props.fetchMember('bts')} />
+              <Group logo={WannaOneLogo} onClick={() => this.props.fetchMember('wannaone')} />
             </div>
-    
+
             {this.props.groupName && (
               <>
                 <span className="font-semibold text-lg"> Members of {this.props.groupName}</span>
-                <div className="w-full flex flex-wrap my-4">
+                <div className="w-full flex flex-wrap my-4" data-testid="member-wrapper">
                   {this.props.members.map((member, index) => (
                     <Member member={member} index={index} key={index} />
                   ))}
@@ -56,8 +55,7 @@ class Home extends Component {
               </>
             )}
           </div>
-          )
-        }
+        )}
       </ApplicationContext.Consumer>
     )
   }

@@ -3223,6 +3223,10 @@ table {
   height: 1px;
 }
 
+.h-big {
+  height: 32rem;
+}
+
 .h-full {
   height: 100%;
 }
@@ -4938,6 +4942,14 @@ table {
 
 .fill-current {
   fill: currentColor;
+}
+
+.fill-blue {
+  fill: #3490dc;
+}
+
+.fill-transparent {
+  fill: transparent;
 }
 
 .stroke-current {
@@ -8980,6 +8992,10 @@ table {
 
   .sm\:h-px {
     height: 1px;
+  }
+
+  .sm\:h-big {
+    height: 32rem;
   }
 
   .sm\:h-full {
@@ -14726,6 +14742,10 @@ table {
     height: 1px;
   }
 
+  .md\:h-big {
+    height: 32rem;
+  }
+
   .md\:h-full {
     height: 100%;
   }
@@ -20470,6 +20490,10 @@ table {
     height: 1px;
   }
 
+  .lg\:h-big {
+    height: 32rem;
+  }
+
   .lg\:h-full {
     height: 100%;
   }
@@ -26212,6 +26236,10 @@ table {
 
   .xl\:h-px {
     height: 1px;
+  }
+
+  .xl\:h-big {
+    height: 32rem;
   }
 
   .xl\:h-full {

@@ -20,12 +20,21 @@ const generateIndex = index => {
 }
 
 export default function Member({member, index}) {
+  const style = {
+    backgroundPosition: 'center',
+    backgroundImage: `url(${member.image})`
+  }
+
   return (
-    <div className={generatePadding(index)}>
+    <div data-testid="member-container" id="asd" className={generatePadding(index)}>
       <div className="bg-white rounded shadow flex flex-col justify-center">
-        <img className="cover w-full" src={member.image} alt="apink" />
-        <span className="font-medium text-xl text-center p-2">{member.name}</span>
-        <span className="font-medium text-subtle-grey text-center p-2">{member.dateOfBirth}</span>
+        <div className="bg-cover w-full h-big block" style={style} data-testid="member-image" />
+        <span className="font-medium text-xl text-center p-2" data-testid="member-name">
+          {member.name}
+        </span>
+        <span className="font-medium text-subtle-grey text-center p-2" data-testid="member-date-of-birth">
+          {member.dateOfBirth}
+        </span>
       </div>
     </div>
   )

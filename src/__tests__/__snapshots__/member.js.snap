@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it will match the snapshot 1`] = `
+<div>
+  <div
+    class="w-1/4 pr-2 pb-4"
+    data-testid="member-container"
+    id="asd"
+  >
+    <div
+      class="bg-white rounded shadow flex flex-col justify-center"
+    >
+      <div
+        class="bg-cover w-full h-big block"
+        data-testid="member-image"
+        style="background-position: center; background-image: url(/);"
+      />
+      <span
+        class="font-medium text-xl text-center p-2"
+        data-testid="member-name"
+      >
+        Kim Nam Joo
+      </span>
+      <span
+        class="font-medium text-subtle-grey text-center p-2"
+        data-testid="member-date-of-birth"
+      >
+        15-04-1995
+      </span>
+    </div>
+  </div>
+</div>
+`;

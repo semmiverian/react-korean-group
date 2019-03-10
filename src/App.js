@@ -3,7 +3,8 @@ import './App.css'
 import './tailwind.css'
 
 import Home from './containers/Home.jsx'
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import FindGroup from './containers/FindGroup.jsx'
+import {Route, Switch} from 'react-router-dom'
 import {Provider} from 'react-redux'
 import store from './store/index'
 import ApplicationContext from './context'
@@ -11,27 +12,6 @@ import ApplicationContext from './context'
 import Navigation from './components/Navigation'
 
 class App extends Component {
-  constructor() {
-    super()
-    this.state = {
-      theme: {
-        dark: {
-          text: 'text-white',
-          background: 'bg-warm-grey',
-          nav: 'bg-warm-grey-light',
-          card: 'bg-warm-grey-light'
-        },
-        light: {
-          text: 'text-black',
-          background: 'bg-grey-lighter',
-          nav: 'bg-white',
-          card: 'bg-white'
-        }
-      },
-      active: 'light'
-    }
-  }
-
   state = {
     theme: {
       dark: {
@@ -74,21 +54,20 @@ class App extends Component {
     return (
       <ApplicationContext.Provider value={contextValue}>
         <Provider store={store}>
-          <Router>
-            <ApplicationContext.Consumer>
-              {value => (
-                <div className={`${value.background} min-h-screen`}>
-                  <>
-                    <Navigation active={active} changeTheme={value.changeTheme} />
+          <ApplicationContext.Consumer>
+            {value => (
+              <div className={`${value.background} min-h-screen`}>
+                <>
+                  <Navigation active={active} changeTheme={value.changeTheme} />
 
-                    <Switch>
-                      <Route exact path="/" component={Home} />
-                    </Switch>
-                  </>
-                </div>
-              )}
-            </ApplicationContext.Consumer>
-          </Router>
+                  <Switch>
+                    <Route exact path="/" component={Home} />
+                    <Route path="/find-group" component={FindGroup} />
+                  </Switch>
+                </>
+              </div>
+            )}
+          </ApplicationContext.Consumer>
         </Provider>
       </ApplicationContext.Provider>
     )
