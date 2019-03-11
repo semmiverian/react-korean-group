@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it will works with snapshot 1`] = `
+<div>
+  <div>
+    <h1>
+      Halo kosasih 
+      <span>
+        😘🥰😍😍
+      </span>
+    </h1>
+  </div>
+</div>
+`;
