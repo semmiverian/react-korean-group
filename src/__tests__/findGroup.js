@@ -1,10 +1,27 @@
 import React from 'react'
 import App from './../App'
-import {render, wait} from 'react-testing-library'
+import { render, wait, fireEvent} from 'react-testing-library'
 import {MemoryRouter as Router} from 'react-router-dom'
 import 'jest-dom/extend-expect'
 import 'react-testing-library/cleanup-after-each'
-import { fireEvent } from 'react-testing-library/dist';
+import { fetchMember as fetchMemberMock} from './../api/api'
+
+
+jest.mock('./../api/api', () => {
+  return {
+    fetchMember: jest.fn(() => {
+      console.log('ini fungsi yang di mock')
+      return Promise.resolve({
+        members: Array.from({ length: 7 }, () => ({
+          image: '/',
+          name: 'dummy name',
+          dateOfBirth: ''
+        })),
+        groupName: 'bts'
+      })
+    })
+  }
+})
 
 test('it will navigate to /find-group when find group link is clicked', () => {
   const {container, getByText, debug, getByTestId, queryByTestId} = render(
@@ -33,6 +50,8 @@ test('it will navigate to /find-group when find group link is clicked', () => {
     .then(() => {
       const memberWrapper = getByTestId('member-wrapper')
       expect(memberWrapper.childElementCount).toBe(7)
+      expect(fetchMemberMock).toHaveBeenCalledTimes(1)
+      expect(fetchMemberMock).toHaveBeenCalledWith('bts')
     })
 
 })
