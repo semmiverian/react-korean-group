@@ -38,8 +38,8 @@ export default class FindGroup extends Component {
 
   render() {
     return (
-      <div className="w-4/5 mx-auto">
-        <form onSubmit={this.findGroup} action="" className="my-5">
+      <div className="w-4/5 mx-auto" data-testid="find-group-page">
+        <form onSubmit={this.findGroup} action="" className="my-5" data-testid="submit-search">
           <div className="flex w-full mb-6">
             <div className="w-4/5 relative">
               <input
@@ -47,6 +47,7 @@ export default class FindGroup extends Component {
                 placeholder="Search Any Group"
                 onChange={this.onChange}
                 value={this.state.group}
+                data-testid="group-name"
                 className="appearance-none bg-white text-grey-darker border border-grey-lighter rounded-l py-3 pl-10 leading-tight focus:outline-none focus:bg-white focus:border-grey w-full"
               />
               <div className="pointer-events-none absolute pin-y pin-l pb-2 flex items-center">
@@ -69,7 +70,7 @@ export default class FindGroup extends Component {
         {this.state.groupName && (
           <>
             <span className="font-semibold text-lg"> Members of {this.state.groupName}</span>
-            <div className="w-full flex flex-wrap my-4">
+            <div className="w-full flex flex-wrap my-4" data-testid="member-wrapper">
               {this.state.members.map((member, index) => (
                 <Member member={member} index={index} key={index} />
               ))}

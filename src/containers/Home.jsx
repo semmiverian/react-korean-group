@@ -12,42 +12,30 @@ import {bindActionCreators} from 'redux'
 import {fetchMember} from '../store/actions/member'
 import ApplicationContext from '../context'
 
-class Home extends Component {
+export class Home extends Component {
   state = {
     members: [],
     groupName: ''
-  }
-
-  fetchMember = async member => {
-    try {
-      const {data} = await axios.get(`http://localhost:3001/${member}`)
-      this.setState({
-        members: data,
-        groupName: member
-      })
-    } catch (err) {
-      console.log(err)
-    }
   }
 
   render() {
     return (
       <ApplicationContext.Consumer>
         {theme => (
-          <div className="w-4/5 mx-auto">
+          <div className="w-4/5 mx-auto" data-testid="home-page">
             <span className={`font-semibold text-lg ${theme.text}`}> Choose Your favorite Group</span>
 
             <div className="w-full flex justify-between my-4">
-              <Group logo={ApinkLogo} onClick={() => this.props.fetchMember('apink')} />
-              <Group logo={LoonaLogo} onClick={() => this.props.fetchMember('loona')} />
-              <Group logo={BtsLogo} onClick={() => this.props.fetchMember('bts')} />
-              <Group logo={WannaOneLogo} onClick={() => this.props.fetchMember('wannaone')} />
+              <Group logo={ApinkLogo} testId="apink" onClick={() => this.props.fetchMember('apink')} />
+              <Group logo={LoonaLogo} testId="loona" onClick={() => this.props.fetchMember('loona')} />
+              <Group logo={BtsLogo} testId="bts" onClick={() => this.props.fetchMember('bts')} />
+              <Group logo={WannaOneLogo} testId="wannaone" onClick={() => this.props.fetchMember('wannaone')} />
             </div>
 
             {this.props.groupName && (
               <>
                 <span className="font-semibold text-lg"> Members of {this.props.groupName}</span>
-                <div className="w-full flex flex-wrap my-4">
+                <div className="w-full flex flex-wrap my-4" data-testid="member-wrapper">
                   {this.props.members.map((member, index) => (
                     <Member member={member} index={index} key={index} />
                   ))}
@@ -71,6 +59,8 @@ const mapStateToProps = state => ({
 // })
 
 const mapDispatchToProps = dispatch => bindActionCreators({fetchMember}, dispatch)
+
+
 
 export default connect(
   mapStateToProps,
