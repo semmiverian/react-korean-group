@@ -38,12 +38,13 @@ export default class FindGroup extends Component {
 
   render() {
     return (
-      <div className="w-4/5 mx-auto">
+      <div className="w-4/5 mx-auto" data-testid="findGroupPage">
         <form onSubmit={this.findGroup} action="" className="my-5">
           <div className="flex w-full mb-6">
             <div className="w-4/5 relative">
               <input
                 type="text"
+                data-testid="formInput"
                 placeholder="Search Any Group"
                 onChange={this.onChange}
                 value={this.state.group}
@@ -59,7 +60,7 @@ export default class FindGroup extends Component {
                 </svg>
               </div>
             </div>
-            <button type="submit" className="bg-blue text-white font-semibold rounded-r h-11 w-1/5 ml-auto">
+            <button type="submit" data-testid="formSubmit" className="bg-blue text-white font-semibold rounded-r h-11 w-1/5 ml-auto">
               <span>Find Group</span>
             </button>
           </div>
@@ -69,7 +70,7 @@ export default class FindGroup extends Component {
         {this.state.groupName && (
           <>
             <span className="font-semibold text-lg"> Members of {this.state.groupName}</span>
-            <div className="w-full flex flex-wrap my-4">
+            <div className="w-full flex flex-wrap my-4" data-testid="memberList">
               {this.state.members.map((member, index) => (
                 <Member member={member} index={index} key={index} />
               ))}

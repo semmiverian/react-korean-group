@@ -12,11 +12,16 @@ import {bindActionCreators} from 'redux'
 import {fetchMember} from '../store/actions/member'
 import ApplicationContext from '../context'
 
-class Home extends Component {
+export class Home extends Component {
   state = {
     members: [],
     groupName: ''
   }
+
+  componentDidMount() {
+    console.log(this.props.fetchMember)
+  }
+  
 
   fetchMember = async member => {
     try {

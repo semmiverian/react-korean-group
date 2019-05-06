@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match snapshot 1`] = `
+<div>
+  <div
+    class="w-1/5 cursor-pointer bg-white rounded shadow flex flex-row justify-center p-3"
+  >
+    <img
+      class="cover h-48 w-48"
+    />
+  </div>
+</div>
+`;

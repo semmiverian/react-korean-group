@@ -13,6 +13,7 @@ export default function Group({logo, onClick, id}) {
               data-testid={id}
               >
           <Image logo={logo} />
+
         </div>
         )
       }
