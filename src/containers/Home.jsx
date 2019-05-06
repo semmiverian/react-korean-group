@@ -38,16 +38,16 @@ class Home extends Component {
             <span className={`font-semibold text-lg ${theme.text}`}> Choose Your favorite Group</span>
 
             <div className="w-full flex justify-between my-4">
-              <Group logo={ApinkLogo} onClick={() => this.props.fetchMember('apink')} />
-              <Group logo={LoonaLogo} onClick={() => this.props.fetchMember('loona')} />
-              <Group logo={BtsLogo} onClick={() => this.props.fetchMember('bts')} />
-              <Group logo={WannaOneLogo} onClick={() => this.props.fetchMember('wannaone')} />
+              <Group logo={ApinkLogo} onClick={() => this.props.fetchMember('apink')} id="apink" />
+              <Group logo={LoonaLogo} onClick={() => this.props.fetchMember('loona')} id="loona" />
+              <Group logo={BtsLogo} onClick={() => this.props.fetchMember('bts')} id="bts" />
+              <Group logo={WannaOneLogo} onClick={() => this.props.fetchMember('wannaone')} id="wannaone" />
             </div>
 
             {this.props.groupName && (
               <>
-                <span className="font-semibold text-lg"> Members of {this.props.groupName}</span>
-                <div className="w-full flex flex-wrap my-4">
+                <span className="font-semibold text-lg" data-testid="memberWrapper"> Members of {this.props.groupName}</span>
+                <div className="w-full flex flex-wrap my-4" data-testid="memberList">
                   {this.props.members.map((member, index) => (
                     <Member member={member} index={index} key={index} />
                   ))}
