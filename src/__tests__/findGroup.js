@@ -3,9 +3,42 @@ import App from '../App'
 import {render, fireEvent, waitForElement} from 'react-testing-library'
 import 'jest-dom/extend-expect'
 import 'react-testing-library/cleanup-after-each'
-
 // Routing
 import {MemoryRouter as Router} from 'react-router-dom'
+import {fetchMember} from './../api/axios'
+
+
+// Mocking path 
+jest.mock('../api/axios', function () {
+  return {
+    fetchMember: jest.fn(function (url) {
+      console.log('Mengapa berat ungkapkan cinta padahal dia ada')
+      return Promise.resolve({
+        data: Array.from({length: 11}, () => ({
+          name: 'Eltim lagi bingung',
+          image: '/',
+          dateOfBirth: '03-05-2000'
+        }))
+      })
+    })
+  }
+})
+
+// Mocking Axios
+// jest.mock('axios', function () {
+//   return {
+//     get: function (url) {
+//       console.log('Fungsi axios ini dipanggil')
+//       return {
+//         data: Array.from({length: 11}, () => ({
+//           name: 'Eltim lagi bingung',
+//           image: '/',
+//           dateOfBirth: '03-05-2000'
+//         }))
+//       }
+//     }
+//   }
+// })
 
 
 it('should render correctly', (done) => {
@@ -41,8 +74,12 @@ it('should render correctly', (done) => {
 
   waitForElement(() => getByTestId('memberList'))
     .then(() => {
-      expect(getByTestId('memberList').childElementCount).toBe(11)
 
+      expect(fetchMember).toHaveBeenCalledTimes(1)
+      expect(fetchMember).toHaveBeenCalledWith('wannaone')
+      expect(getByTestId('memberList').childElementCount).toBe(11)
+      console.log('eltim')
+      // debug()
       done()
     })
     .catch(err => {

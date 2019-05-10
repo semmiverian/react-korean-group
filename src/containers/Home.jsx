@@ -39,7 +39,7 @@ export class Home extends Component {
     return (
       <ApplicationContext.Consumer>
         {theme => (
-          <div className="w-4/5 mx-auto">
+          <div className="w-4/5 mx-auto" data-testid="home">
             <span className={`font-semibold text-lg ${theme.text}`}> Choose Your favorite Group</span>
 
             <div className="w-full flex justify-between my-4">

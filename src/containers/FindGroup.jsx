@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import axios from 'axios'
 import Member from './../components/Member.jsx'
+import {fetchMember} from './../api/axios'
 
 export default class FindGroup extends Component {
   state = {
@@ -18,7 +19,7 @@ export default class FindGroup extends Component {
 
   fetchMember = async member => {
     try {
-      const {data} = await axios.get(`http://localhost:3001/${member}`)
+      const {data} = await fetchMember(member)
       this.setState({
         members: data,
         groupName: member,
