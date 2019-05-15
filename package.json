@@ -18,7 +18,7 @@
     "tailwind:css": "tailwind build src/tailwind.src.css -c  tailwind.js -o src/tailwind.css",
     "start": "yarn tailwind:css && react-scripts start",
     "build": "yarn tailwind:css && react-scripts build",
-    "test": "react-scripts test",
+    "test": "npm run api & react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
