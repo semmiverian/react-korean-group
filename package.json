@@ -4,12 +4,17 @@
   "private": true,
   "dependencies": {
     "axios": "0.18.0",
+    "json-server": "0.14.2",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
+    "react-redux": "6.0.1",
     "react-router-dom": "4.3.1",
-    "react-scripts": "2.1.5"
+    "react-scripts": "2.1.5",
+    "redux": "4.0.1",
+    "redux-thunk": "2.3.0"
   },
   "scripts": {
+    "api": "node_modules/.bin/json-server src/api/data.json --port 3001",
     "tailwind:css": "tailwind build src/tailwind.src.css -c  tailwind.js -o src/tailwind.css",
     "start": "yarn tailwind:css && react-scripts start",
     "build": "yarn tailwind:css && react-scripts build",
@@ -26,6 +31,9 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "jest-dom": "3.1.4",
+    "react-testing-library": "7.0.0",
+    "redux-devtools-extension": "2.13.8",
     "tailwindcss": "0.7.4"
   }
 }

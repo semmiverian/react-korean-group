@@ -1,9 +1,22 @@
 import React from 'react'
+import Image from './Image'
+import ApplicationContext from '../context'
 
-export default function Group({logo, onClick}) {
+
+export default function Group({logo, onClick, id}) {
   return (
-    <div className="w-1/5 cursor-pointer bg-white rounded shadow flex flex-row justify-center p-3" onClick={onClick}>
-      <img className="cover h-48 w-48" src={logo} alt="apink" />
-    </div>
+    <ApplicationContext.Consumer>
+      {
+        theme => (
+          <div className={`w-1/5 cursor-pointer ${theme.card} rounded shadow flex flex-row justify-center p-3`} 
+              onClick={onClick}
+              data-testid={id}
+              >
+          <Image logo={logo} />
+
+        </div>
+        )
+      }
+    </ApplicationContext.Consumer>
   )
 }

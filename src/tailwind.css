@@ -843,6 +843,14 @@ table {
   background-color: #ffebef;
 }
 
+.bg-warm-grey {
+  background-color: hsl(209, 34%, 30%);
+}
+
+.bg-warm-grey-light {
+  background-color: hsl(209, 61%, 16%);
+}
+
 .hover\:bg-transparent:hover {
   background-color: transparent;
 }
@@ -1139,6 +1147,14 @@ table {
   background-color: #ffebef;
 }
 
+.hover\:bg-warm-grey:hover {
+  background-color: hsl(209, 34%, 30%);
+}
+
+.hover\:bg-warm-grey-light:hover {
+  background-color: hsl(209, 61%, 16%);
+}
+
 .focus\:bg-transparent:focus {
   background-color: transparent;
 }
@@ -1433,6 +1449,14 @@ table {
 
 .focus\:bg-pink-lightest:focus {
   background-color: #ffebef;
+}
+
+.focus\:bg-warm-grey:focus {
+  background-color: hsl(209, 34%, 30%);
+}
+
+.focus\:bg-warm-grey-light:focus {
+  background-color: hsl(209, 61%, 16%);
 }
 
 .bg-bottom {
@@ -1803,6 +1827,14 @@ table {
   border-color: #ffebef;
 }
 
+.border-warm-grey {
+  border-color: hsl(209, 34%, 30%);
+}
+
+.border-warm-grey-light {
+  border-color: hsl(209, 61%, 16%);
+}
+
 .hover\:border-transparent:hover {
   border-color: transparent;
 }
@@ -2099,6 +2131,14 @@ table {
   border-color: #ffebef;
 }
 
+.hover\:border-warm-grey:hover {
+  border-color: hsl(209, 34%, 30%);
+}
+
+.hover\:border-warm-grey-light:hover {
+  border-color: hsl(209, 61%, 16%);
+}
+
 .focus\:border-transparent:focus {
   border-color: transparent;
 }
@@ -2393,6 +2433,14 @@ table {
 
 .focus\:border-pink-lightest:focus {
   border-color: #ffebef;
+}
+
+.focus\:border-warm-grey:focus {
+  border-color: hsl(209, 34%, 30%);
+}
+
+.focus\:border-warm-grey-light:focus {
+  border-color: hsl(209, 61%, 16%);
 }
 
 .rounded-none {
@@ -3173,6 +3221,10 @@ table {
 
 .h-px {
   height: 1px;
+}
+
+.h-big {
+  height: 32rem;
 }
 
 .h-full {
@@ -4892,6 +4944,14 @@ table {
   fill: currentColor;
 }
 
+.fill-blue {
+  fill: #3490dc;
+}
+
+.fill-transparent {
+  fill: transparent;
+}
+
 .stroke-current {
   stroke: currentColor;
 }
@@ -5216,6 +5276,14 @@ table {
   color: #ffebef;
 }
 
+.text-warm-grey {
+  color: hsl(209, 34%, 30%);
+}
+
+.text-warm-grey-light {
+  color: hsl(209, 61%, 16%);
+}
+
 .hover\:text-transparent:hover {
   color: transparent;
 }
@@ -5512,6 +5580,14 @@ table {
   color: #ffebef;
 }
 
+.hover\:text-warm-grey:hover {
+  color: hsl(209, 34%, 30%);
+}
+
+.hover\:text-warm-grey-light:hover {
+  color: hsl(209, 61%, 16%);
+}
+
 .focus\:text-transparent:focus {
   color: transparent;
 }
@@ -5806,6 +5882,14 @@ table {
 
 .focus\:text-pink-lightest:focus {
   color: #ffebef;
+}
+
+.focus\:text-warm-grey:focus {
+  color: hsl(209, 34%, 30%);
+}
+
+.focus\:text-warm-grey-light:focus {
+  color: hsl(209, 61%, 16%);
 }
 
 .text-xs {
@@ -6538,6 +6622,14 @@ table {
     background-color: #ffebef;
   }
 
+  .sm\:bg-warm-grey {
+    background-color: hsl(209, 34%, 30%);
+  }
+
+  .sm\:bg-warm-grey-light {
+    background-color: hsl(209, 61%, 16%);
+  }
+
   .sm\:hover\:bg-transparent:hover {
     background-color: transparent;
   }
@@ -6834,6 +6926,14 @@ table {
     background-color: #ffebef;
   }
 
+  .sm\:hover\:bg-warm-grey:hover {
+    background-color: hsl(209, 34%, 30%);
+  }
+
+  .sm\:hover\:bg-warm-grey-light:hover {
+    background-color: hsl(209, 61%, 16%);
+  }
+
   .sm\:focus\:bg-transparent:focus {
     background-color: transparent;
   }
@@ -7128,6 +7228,14 @@ table {
 
   .sm\:focus\:bg-pink-lightest:focus {
     background-color: #ffebef;
+  }
+
+  .sm\:focus\:bg-warm-grey:focus {
+    background-color: hsl(209, 34%, 30%);
+  }
+
+  .sm\:focus\:bg-warm-grey-light:focus {
+    background-color: hsl(209, 61%, 16%);
   }
 
   .sm\:bg-bottom {
@@ -7490,6 +7598,14 @@ table {
     border-color: #ffebef;
   }
 
+  .sm\:border-warm-grey {
+    border-color: hsl(209, 34%, 30%);
+  }
+
+  .sm\:border-warm-grey-light {
+    border-color: hsl(209, 61%, 16%);
+  }
+
   .sm\:hover\:border-transparent:hover {
     border-color: transparent;
   }
@@ -7786,6 +7902,14 @@ table {
     border-color: #ffebef;
   }
 
+  .sm\:hover\:border-warm-grey:hover {
+    border-color: hsl(209, 34%, 30%);
+  }
+
+  .sm\:hover\:border-warm-grey-light:hover {
+    border-color: hsl(209, 61%, 16%);
+  }
+
   .sm\:focus\:border-transparent:focus {
     border-color: transparent;
   }
@@ -8080,6 +8204,14 @@ table {
 
   .sm\:focus\:border-pink-lightest:focus {
     border-color: #ffebef;
+  }
+
+  .sm\:focus\:border-warm-grey:focus {
+    border-color: hsl(209, 34%, 30%);
+  }
+
+  .sm\:focus\:border-warm-grey-light:focus {
+    border-color: hsl(209, 61%, 16%);
   }
 
   .sm\:rounded-none {
@@ -8860,6 +8992,10 @@ table {
 
   .sm\:h-px {
     height: 1px;
+  }
+
+  .sm\:h-big {
+    height: 32rem;
   }
 
   .sm\:h-full {
@@ -10887,6 +11023,14 @@ table {
     color: #ffebef;
   }
 
+  .sm\:text-warm-grey {
+    color: hsl(209, 34%, 30%);
+  }
+
+  .sm\:text-warm-grey-light {
+    color: hsl(209, 61%, 16%);
+  }
+
   .sm\:hover\:text-transparent:hover {
     color: transparent;
   }
@@ -11183,6 +11327,14 @@ table {
     color: #ffebef;
   }
 
+  .sm\:hover\:text-warm-grey:hover {
+    color: hsl(209, 34%, 30%);
+  }
+
+  .sm\:hover\:text-warm-grey-light:hover {
+    color: hsl(209, 61%, 16%);
+  }
+
   .sm\:focus\:text-transparent:focus {
     color: transparent;
   }
@@ -11477,6 +11629,14 @@ table {
 
   .sm\:focus\:text-pink-lightest:focus {
     color: #ffebef;
+  }
+
+  .sm\:focus\:text-warm-grey:focus {
+    color: hsl(209, 34%, 30%);
+  }
+
+  .sm\:focus\:text-warm-grey-light:focus {
+    color: hsl(209, 61%, 16%);
   }
 
   .sm\:text-xs {
@@ -12210,6 +12370,14 @@ table {
     background-color: #ffebef;
   }
 
+  .md\:bg-warm-grey {
+    background-color: hsl(209, 34%, 30%);
+  }
+
+  .md\:bg-warm-grey-light {
+    background-color: hsl(209, 61%, 16%);
+  }
+
   .md\:hover\:bg-transparent:hover {
     background-color: transparent;
   }
@@ -12506,6 +12674,14 @@ table {
     background-color: #ffebef;
   }
 
+  .md\:hover\:bg-warm-grey:hover {
+    background-color: hsl(209, 34%, 30%);
+  }
+
+  .md\:hover\:bg-warm-grey-light:hover {
+    background-color: hsl(209, 61%, 16%);
+  }
+
   .md\:focus\:bg-transparent:focus {
     background-color: transparent;
   }
@@ -12800,6 +12976,14 @@ table {
 
   .md\:focus\:bg-pink-lightest:focus {
     background-color: #ffebef;
+  }
+
+  .md\:focus\:bg-warm-grey:focus {
+    background-color: hsl(209, 34%, 30%);
+  }
+
+  .md\:focus\:bg-warm-grey-light:focus {
+    background-color: hsl(209, 61%, 16%);
   }
 
   .md\:bg-bottom {
@@ -13162,6 +13346,14 @@ table {
     border-color: #ffebef;
   }
 
+  .md\:border-warm-grey {
+    border-color: hsl(209, 34%, 30%);
+  }
+
+  .md\:border-warm-grey-light {
+    border-color: hsl(209, 61%, 16%);
+  }
+
   .md\:hover\:border-transparent:hover {
     border-color: transparent;
   }
@@ -13458,6 +13650,14 @@ table {
     border-color: #ffebef;
   }
 
+  .md\:hover\:border-warm-grey:hover {
+    border-color: hsl(209, 34%, 30%);
+  }
+
+  .md\:hover\:border-warm-grey-light:hover {
+    border-color: hsl(209, 61%, 16%);
+  }
+
   .md\:focus\:border-transparent:focus {
     border-color: transparent;
   }
@@ -13752,6 +13952,14 @@ table {
 
   .md\:focus\:border-pink-lightest:focus {
     border-color: #ffebef;
+  }
+
+  .md\:focus\:border-warm-grey:focus {
+    border-color: hsl(209, 34%, 30%);
+  }
+
+  .md\:focus\:border-warm-grey-light:focus {
+    border-color: hsl(209, 61%, 16%);
   }
 
   .md\:rounded-none {
@@ -14532,6 +14740,10 @@ table {
 
   .md\:h-px {
     height: 1px;
+  }
+
+  .md\:h-big {
+    height: 32rem;
   }
 
   .md\:h-full {
@@ -16559,6 +16771,14 @@ table {
     color: #ffebef;
   }
 
+  .md\:text-warm-grey {
+    color: hsl(209, 34%, 30%);
+  }
+
+  .md\:text-warm-grey-light {
+    color: hsl(209, 61%, 16%);
+  }
+
   .md\:hover\:text-transparent:hover {
     color: transparent;
   }
@@ -16855,6 +17075,14 @@ table {
     color: #ffebef;
   }
 
+  .md\:hover\:text-warm-grey:hover {
+    color: hsl(209, 34%, 30%);
+  }
+
+  .md\:hover\:text-warm-grey-light:hover {
+    color: hsl(209, 61%, 16%);
+  }
+
   .md\:focus\:text-transparent:focus {
     color: transparent;
   }
@@ -17149,6 +17377,14 @@ table {
 
   .md\:focus\:text-pink-lightest:focus {
     color: #ffebef;
+  }
+
+  .md\:focus\:text-warm-grey:focus {
+    color: hsl(209, 34%, 30%);
+  }
+
+  .md\:focus\:text-warm-grey-light:focus {
+    color: hsl(209, 61%, 16%);
   }
 
   .md\:text-xs {
@@ -17882,6 +18118,14 @@ table {
     background-color: #ffebef;
   }
 
+  .lg\:bg-warm-grey {
+    background-color: hsl(209, 34%, 30%);
+  }
+
+  .lg\:bg-warm-grey-light {
+    background-color: hsl(209, 61%, 16%);
+  }
+
   .lg\:hover\:bg-transparent:hover {
     background-color: transparent;
   }
@@ -18178,6 +18422,14 @@ table {
     background-color: #ffebef;
   }
 
+  .lg\:hover\:bg-warm-grey:hover {
+    background-color: hsl(209, 34%, 30%);
+  }
+
+  .lg\:hover\:bg-warm-grey-light:hover {
+    background-color: hsl(209, 61%, 16%);
+  }
+
   .lg\:focus\:bg-transparent:focus {
     background-color: transparent;
   }
@@ -18472,6 +18724,14 @@ table {
 
   .lg\:focus\:bg-pink-lightest:focus {
     background-color: #ffebef;
+  }
+
+  .lg\:focus\:bg-warm-grey:focus {
+    background-color: hsl(209, 34%, 30%);
+  }
+
+  .lg\:focus\:bg-warm-grey-light:focus {
+    background-color: hsl(209, 61%, 16%);
   }
 
   .lg\:bg-bottom {
@@ -18834,6 +19094,14 @@ table {
     border-color: #ffebef;
   }
 
+  .lg\:border-warm-grey {
+    border-color: hsl(209, 34%, 30%);
+  }
+
+  .lg\:border-warm-grey-light {
+    border-color: hsl(209, 61%, 16%);
+  }
+
   .lg\:hover\:border-transparent:hover {
     border-color: transparent;
   }
@@ -19130,6 +19398,14 @@ table {
     border-color: #ffebef;
   }
 
+  .lg\:hover\:border-warm-grey:hover {
+    border-color: hsl(209, 34%, 30%);
+  }
+
+  .lg\:hover\:border-warm-grey-light:hover {
+    border-color: hsl(209, 61%, 16%);
+  }
+
   .lg\:focus\:border-transparent:focus {
     border-color: transparent;
   }
@@ -19424,6 +19700,14 @@ table {
 
   .lg\:focus\:border-pink-lightest:focus {
     border-color: #ffebef;
+  }
+
+  .lg\:focus\:border-warm-grey:focus {
+    border-color: hsl(209, 34%, 30%);
+  }
+
+  .lg\:focus\:border-warm-grey-light:focus {
+    border-color: hsl(209, 61%, 16%);
   }
 
   .lg\:rounded-none {
@@ -20204,6 +20488,10 @@ table {
 
   .lg\:h-px {
     height: 1px;
+  }
+
+  .lg\:h-big {
+    height: 32rem;
   }
 
   .lg\:h-full {
@@ -22231,6 +22519,14 @@ table {
     color: #ffebef;
   }
 
+  .lg\:text-warm-grey {
+    color: hsl(209, 34%, 30%);
+  }
+
+  .lg\:text-warm-grey-light {
+    color: hsl(209, 61%, 16%);
+  }
+
   .lg\:hover\:text-transparent:hover {
     color: transparent;
   }
@@ -22527,6 +22823,14 @@ table {
     color: #ffebef;
   }
 
+  .lg\:hover\:text-warm-grey:hover {
+    color: hsl(209, 34%, 30%);
+  }
+
+  .lg\:hover\:text-warm-grey-light:hover {
+    color: hsl(209, 61%, 16%);
+  }
+
   .lg\:focus\:text-transparent:focus {
     color: transparent;
   }
@@ -22821,6 +23125,14 @@ table {
 
   .lg\:focus\:text-pink-lightest:focus {
     color: #ffebef;
+  }
+
+  .lg\:focus\:text-warm-grey:focus {
+    color: hsl(209, 34%, 30%);
+  }
+
+  .lg\:focus\:text-warm-grey-light:focus {
+    color: hsl(209, 61%, 16%);
   }
 
   .lg\:text-xs {
@@ -23554,6 +23866,14 @@ table {
     background-color: #ffebef;
   }
 
+  .xl\:bg-warm-grey {
+    background-color: hsl(209, 34%, 30%);
+  }
+
+  .xl\:bg-warm-grey-light {
+    background-color: hsl(209, 61%, 16%);
+  }
+
   .xl\:hover\:bg-transparent:hover {
     background-color: transparent;
   }
@@ -23850,6 +24170,14 @@ table {
     background-color: #ffebef;
   }
 
+  .xl\:hover\:bg-warm-grey:hover {
+    background-color: hsl(209, 34%, 30%);
+  }
+
+  .xl\:hover\:bg-warm-grey-light:hover {
+    background-color: hsl(209, 61%, 16%);
+  }
+
   .xl\:focus\:bg-transparent:focus {
     background-color: transparent;
   }
@@ -24144,6 +24472,14 @@ table {
 
   .xl\:focus\:bg-pink-lightest:focus {
     background-color: #ffebef;
+  }
+
+  .xl\:focus\:bg-warm-grey:focus {
+    background-color: hsl(209, 34%, 30%);
+  }
+
+  .xl\:focus\:bg-warm-grey-light:focus {
+    background-color: hsl(209, 61%, 16%);
   }
 
   .xl\:bg-bottom {
@@ -24506,6 +24842,14 @@ table {
     border-color: #ffebef;
   }
 
+  .xl\:border-warm-grey {
+    border-color: hsl(209, 34%, 30%);
+  }
+
+  .xl\:border-warm-grey-light {
+    border-color: hsl(209, 61%, 16%);
+  }
+
   .xl\:hover\:border-transparent:hover {
     border-color: transparent;
   }
@@ -24802,6 +25146,14 @@ table {
     border-color: #ffebef;
   }
 
+  .xl\:hover\:border-warm-grey:hover {
+    border-color: hsl(209, 34%, 30%);
+  }
+
+  .xl\:hover\:border-warm-grey-light:hover {
+    border-color: hsl(209, 61%, 16%);
+  }
+
   .xl\:focus\:border-transparent:focus {
     border-color: transparent;
   }
@@ -25096,6 +25448,14 @@ table {
 
   .xl\:focus\:border-pink-lightest:focus {
     border-color: #ffebef;
+  }
+
+  .xl\:focus\:border-warm-grey:focus {
+    border-color: hsl(209, 34%, 30%);
+  }
+
+  .xl\:focus\:border-warm-grey-light:focus {
+    border-color: hsl(209, 61%, 16%);
   }
 
   .xl\:rounded-none {
@@ -25876,6 +26236,10 @@ table {
 
   .xl\:h-px {
     height: 1px;
+  }
+
+  .xl\:h-big {
+    height: 32rem;
   }
 
   .xl\:h-full {
@@ -27903,6 +28267,14 @@ table {
     color: #ffebef;
   }
 
+  .xl\:text-warm-grey {
+    color: hsl(209, 34%, 30%);
+  }
+
+  .xl\:text-warm-grey-light {
+    color: hsl(209, 61%, 16%);
+  }
+
   .xl\:hover\:text-transparent:hover {
     color: transparent;
   }
@@ -28199,6 +28571,14 @@ table {
     color: #ffebef;
   }
 
+  .xl\:hover\:text-warm-grey:hover {
+    color: hsl(209, 34%, 30%);
+  }
+
+  .xl\:hover\:text-warm-grey-light:hover {
+    color: hsl(209, 61%, 16%);
+  }
+
   .xl\:focus\:text-transparent:focus {
     color: transparent;
   }
@@ -28493,6 +28873,14 @@ table {
 
   .xl\:focus\:text-pink-lightest:focus {
     color: #ffebef;
+  }
+
+  .xl\:focus\:text-warm-grey:focus {
+    color: hsl(209, 34%, 30%);
+  }
+
+  .xl\:focus\:text-warm-grey-light:focus {
+    color: hsl(209, 61%, 16%);
   }
 
   .xl\:text-xs {

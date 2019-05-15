@@ -1,17 +1,27 @@
 import React, {Component} from 'react'
 import axios from 'axios'
 import ApinkLogo from './../assets/apink.png'
-import IzoneLogo from './../assets/izone.png'
+import BtsLogo from './../assets/bts.png'
 import LoonaLogo from './../assets/loona.jpg'
-import TwiceLogo from './../assets/twice.png'
+import WannaOneLogo from './../assets/wanna-one.png'
 import Group from './../components/Group.jsx'
 import Member from './../components/Member.jsx'
+import {connect} from 'react-redux'
+import {bindActionCreators} from 'redux'
 
-export default class Home extends Component {
+import {fetchMember} from '../store/actions/member'
+import ApplicationContext from '../context'
+
+export class Home extends Component {
   state = {
     members: [],
     groupName: ''
   }
+
+  componentDidMount() {
+    console.log(this.props.fetchMember)
+  }
+  
 
   fetchMember = async member => {
     try {
@@ -27,27 +37,47 @@ export default class Home extends Component {
 
   render() {
     return (
-      <div className="w-4/5 mx-auto">
-        <span className="font-semibold text-lg"> Choose Your favorite Group</span>
+      <ApplicationContext.Consumer>
+        {theme => (
+          <div className="w-4/5 mx-auto" data-testid="home">
+            <span className={`font-semibold text-lg ${theme.text}`}> Choose Your favorite Group</span>
 
-        <div className="w-full flex justify-between my-4">
-          <Group logo={ApinkLogo} onClick={() => this.fetchMember('apink')} />
-          <Group logo={LoonaLogo} onClick={() => this.fetchMember('loona')} />
-          <Group logo={IzoneLogo} />
-          <Group logo={TwiceLogo} />
-        </div>
-
-        {this.state.groupName && (
-          <>
-            <span className="font-semibold text-lg"> Members of Apink</span>
-            <div className="w-full flex flex-wrap my-4">
-              {this.state.members.map((member, index) => (
-                <Member member={member} index={index} key={index} />
-              ))}
+            <div className="w-full flex justify-between my-4">
+              <Group logo={ApinkLogo} onClick={() => this.props.fetchMember('apink')} id="apink" />
+              <Group logo={LoonaLogo} onClick={() => this.props.fetchMember('loona')} id="loona" />
+              <Group logo={BtsLogo} onClick={() => this.props.fetchMember('bts')} id="bts" />
+              <Group logo={WannaOneLogo} onClick={() => this.props.fetchMember('wannaone')} id="wannaone" />
             </div>
-          </>
+
+            {this.props.groupName && (
+              <>
+                <span className="font-semibold text-lg" data-testid="memberWrapper"> Members of {this.props.groupName}</span>
+                <div className="w-full flex flex-wrap my-4" data-testid="memberList">
+                  {this.props.members.map((member, index) => (
+                    <Member member={member} index={index} key={index} />
+                  ))}
+                </div>
+              </>
+            )}
+          </div>
         )}
-      </div>
+      </ApplicationContext.Consumer>
     )
   }
 }
+
+const mapStateToProps = state => ({
+  groupName: state.member.groupName,
+  members: state.member.members
+})
+
+// const mapDispatchToProps = dispatch => ({
+//   fetchMember: group => dispatch(fetchMember(group))
+// })
+
+const mapDispatchToProps = dispatch => bindActionCreators({fetchMember}, dispatch)
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Home)

@@ -3,24 +3,73 @@ import './App.css'
 import './tailwind.css'
 
 import Home from './containers/Home.jsx'
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import FindGroup from './containers/FindGroup.jsx'
+import {Route, Switch} from 'react-router-dom'
+import {Provider} from 'react-redux'
+import store from './store/index'
+import ApplicationContext from './context'
+
+import Navigation from './components/Navigation'
 
 class App extends Component {
-  render() {
-    return (
-      <Router>
-        <>
-          <nav className="flex items-center justify-around flex-wrap bg-white p-4 shadow sticky content-center mb-4">
-            <div className="flex items-center flex-grow mr-6">
-              <span className="font-semibold text-xl">Korea Dictionary</span>
-            </div>
-          </nav>
+  state = {
+    theme: {
+      dark: {
+        text: 'text-white',
+        background: 'bg-warm-grey',
+        nav: 'bg-warm-grey-light',
+        card: 'bg-warm-grey-light'
+      },
+      light: {
+        text: 'text-black',
+        background: 'bg-grey-lighter',
+        nav: 'bg-white',
+        card: 'bg-white'
+      }
+    },
+    active: 'light'
+  }
 
-          <Switch>
-            <Route exact path="/" component={Home} />
-          </Switch>
-        </>
-      </Router>
+  changeTheme = () => {
+    this.setState(
+      prevState => {
+        return {
+          active: prevState.active === 'light' ? 'dark' : 'light'
+        }
+      },
+      () => {
+        console.log('callback function', this.state.active)
+      }
+    )
+  }
+
+  render() {
+    const {theme, active} = this.state
+
+    const contextValue = {
+      ...theme[active],
+      changeTheme: this.changeTheme
+    }
+
+    return (
+      <ApplicationContext.Provider value={contextValue}>
+        <Provider store={store}>
+          <ApplicationContext.Consumer>
+            {value => (
+              <div className={`${value.background} min-h-screen`}>
+                <>
+                  <Navigation active={active} changeTheme={value.changeTheme} />
+
+                  <Switch>
+                    <Route exact path="/" component={Home} />
+                    <Route path="/find-group" component={FindGroup} />
+                  </Switch>
+                </>
+              </div>
+            )}
+          </ApplicationContext.Consumer>
+        </Provider>
+      </ApplicationContext.Provider>
     )
   }
 }
