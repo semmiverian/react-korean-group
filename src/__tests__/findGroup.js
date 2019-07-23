@@ -7,11 +7,10 @@ import 'react-testing-library/cleanup-after-each'
 import {MemoryRouter as Router} from 'react-router-dom'
 import {fetchMember} from './../api/axios'
 
-
-// Mocking path 
-jest.mock('../api/axios', function () {
+// Mocking path
+jest.mock('../api/axios', function() {
   return {
-    fetchMember: jest.fn(function (url) {
+    fetchMember: jest.fn(function(url) {
       console.log('Mengapa berat ungkapkan cinta padahal dia ada')
       return Promise.resolve({
         data: Array.from({length: 11}, () => ({
@@ -40,8 +39,7 @@ jest.mock('../api/axios', function () {
 //   }
 // })
 
-
-it('should render correctly', (done) => {
+it('should render correctly', done => {
   // Kita akan menampilkan halaman home dulu
   const {debug, getByText, getByTestId} = render(
     <Router initialEntries={['/']}>
@@ -51,7 +49,7 @@ it('should render correctly', (done) => {
 
   const findGroupElement = getByText('Find Group')
   expect(findGroupElement).toBeInTheDocument()
-  
+
   // Kita akan pindah halam dari home ke halaman findGroup
   fireEvent.click(findGroupElement)
   expect(getByTestId('findGroupPage')).toBeInTheDocument()
@@ -74,9 +72,8 @@ it('should render correctly', (done) => {
 
   waitForElement(() => getByTestId('memberList'))
     .then(() => {
-
       expect(fetchMember).toHaveBeenCalledTimes(1)
-      expect(fetchMember).toHaveBeenCalledWith('wannaone')
+      expect(fetchMember).toHaveBeenCalledWith('wanntwo')
       expect(getByTestId('memberList').childElementCount).toBe(11)
       console.log('eltim')
       // debug()
