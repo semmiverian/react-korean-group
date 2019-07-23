@@ -30,7 +30,7 @@ export function fetchMember(group) {
   return async dispatch => {
     dispatch(memberLoading())
     try {
-      const {data} = await axios.get(`http://localhost:3001/${group}`)
+      const {data} = await axios.get(`https://korean-group-dict.semmivp1.now.sh/${group}`)
       dispatch(successMember(data))
       dispatch(setGroupName(group))
     } catch (err) {

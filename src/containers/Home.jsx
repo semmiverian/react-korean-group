@@ -21,7 +21,6 @@ export class Home extends Component {
   componentDidMount() {
     console.log(this.props.fetchMember)
   }
-  
 
   fetchMember = async member => {
     try {
@@ -51,7 +50,10 @@ export class Home extends Component {
 
             {this.props.groupName && (
               <>
-                <span className="font-semibold text-lg" data-testid="memberWrapper"> Members of {this.props.groupName}</span>
+                <span className="font-semibold text-lg" data-testid="memberWrapper">
+                  {' '}
+                  Members of {this.props.groupName}
+                </span>
                 <div className="w-full flex flex-wrap my-4" data-testid="memberList">
                   {this.props.members.map((member, index) => (
                     <Member member={member} index={index} key={index} />
