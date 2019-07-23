@@ -73,7 +73,7 @@ it('should render correctly', done => {
   waitForElement(() => getByTestId('memberList'))
     .then(() => {
       expect(fetchMember).toHaveBeenCalledTimes(1)
-      expect(fetchMember).toHaveBeenCalledWith('wanntwo')
+      expect(fetchMember).toHaveBeenCalledWith('wannaone')
       expect(getByTestId('memberList').childElementCount).toBe(11)
       console.log('eltim')
       // debug()
