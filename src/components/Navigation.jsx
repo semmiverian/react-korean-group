@@ -13,7 +13,7 @@ export default function Navigation({active}) {
             </Link>
             <div>
               <Link to="/find-group" className="no-underline p-2 font-semibold text-lg cursor-pointer text-black">
-                Cari Group
+                Find Group
               </Link>
               <span className="p-2 font-semibold text-lg cursor-pointer" onClick={changeTheme}>
                 {active === 'dark' ? 'Light Mode' : 'Dark Mode'}
