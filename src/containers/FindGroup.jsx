@@ -62,7 +62,7 @@ export default class FindGroup extends Component {
               </div>
             </div>
             <button type="submit" data-testid="formSubmit" className="bg-blue text-white font-semibold rounded-r h-11 w-1/5 ml-auto">
-              <span>Find Group</span>
+              <span>Cari Group</span>
             </button>
           </div>
           {this.state.error && <span className="text-red font-normal text-sm">{this.state.error}</span>}
