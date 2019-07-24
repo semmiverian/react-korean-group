@@ -7,3 +7,16 @@ cache:
     - node_modules
 script:
   - yarn test
+
+before_deploy:
+  - yarn run build
+deploy:
+  provider: s3
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
+  bucket: $S3_BUCKET
+  skip_cleanup: true
+  local-dir: build
+  region: 'ap-southeast-1'
+  on:
+    branch: master
