@@ -15,6 +15,7 @@ deploy:
   secret_access_key: $AWS_SECRET_ACCESS_KEY
   bucket: $S3_BUCKET
   skip_cleanup: true
-  local-dir: dist
+  local-dir: build
+  region: 'ap-southeast-1'
   on:
     branch: travis-ci-master
