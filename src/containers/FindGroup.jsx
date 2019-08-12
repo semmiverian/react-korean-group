@@ -29,8 +29,8 @@ export default function FindGroup() {
   }
 
   return (
-    <div className="w-4/5 mx-auto">
-      <form onSubmit={findGroup} action="" className="my-5">
+    <div className="w-4/5 mx-auto" data-testid="findGroupPage">
+      <form onSubmit={findGroup} action="" className="my-5" data-testid="submitFindGroup">
         <div className="flex w-full mb-6">
           <div className="w-4/5 relative">
             <input
@@ -38,6 +38,7 @@ export default function FindGroup() {
               placeholder="Search Any Group"
               onChange={onChange}
               value={group}
+              data-testid="inputGroup"
               className="appearance-none bg-white text-grey-darker border border-grey-lighter rounded-l py-3 pl-10 leading-tight focus:outline-none focus:bg-white focus:border-grey w-full"
             />
             <div className="pointer-events-none absolute pin-y pin-l pb-2 flex items-center">
@@ -58,14 +59,14 @@ export default function FindGroup() {
       </form>
 
       {groupName && (
-        <>
+        <div data-testid="wrapperMember">
           <span className="font-semibold text-lg"> Members of {groupName}</span>
-          <div className="w-full flex flex-wrap my-4">
+          <div className="w-full flex flex-wrap my-4" data-testid="memberList">
             {members.map((member, index) => (
               <Member member={member} index={index} key={index} />
             ))}
           </div>
-        </>
+        </div>
       )}
     </div>
   )

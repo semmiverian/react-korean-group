@@ -4,6 +4,7 @@ import './tailwind.css'
 
 import Home from './containers/Home.jsx'
 import FindGroup from './containers/FindGroup.jsx'
+import Fragment from './containers/Fragment.js'
 import {Route, Switch} from 'react-router-dom'
 import {Provider} from 'react-redux'
 import store from './store/index'
@@ -63,6 +64,7 @@ class App extends Component {
                   <Switch>
                     <Route exact path="/" component={Home} />
                     <Route path="/find-group" component={FindGroup} />
+                    <Route path="/fragment" component={Fragment} />
                   </Switch>
                 </>
               </div>

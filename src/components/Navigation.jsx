@@ -12,7 +12,7 @@ export default function Navigation({active}) {
               <span className="font-semibold text-xl">Korea Dictionary</span>
             </Link>
             <div>
-              <Link to="/find-group" className="no-underline p-2 font-semibold text-lg cursor-pointer text-black">
+              <Link to="/find-group" className="no-underline p-2 font-semibold text-lg cursor-pointer text-black" data-testid="findGroupLink">
                 Find Group
               </Link>
               <span className="p-2 font-semibold text-lg cursor-pointer" onClick={changeTheme}>

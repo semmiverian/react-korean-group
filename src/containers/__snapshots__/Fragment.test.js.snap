@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should work 1`] = `
+<div>
+  <h2>
+    hahahah
+  </h2>
+  <h3>
+    hasjhdasjhdj
+  </h3>
+  <h3>
+    kosasih
+  </h3>
+</div>
+`;
